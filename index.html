@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1f740c8982.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        *{
+           box-sizing: border-box;
+           margin:0px;
+           padding:0;
+        }
+        a{
+          background-color: lightpink;
+          color: white;
+          padding:15px;
+          border-radius: 4px;
+          width: fit-content;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          text-decoration: none;
+          display: block;
+          margin: 0 auto;
+        }
+        a:hover{
+          background-color: lightpink;
+          color:rgb(239, 74, 98);
+        }
+        .el1{
+            background-color:rgb(255, 255, 255);
+            color:rgb(206, 126, 126);
+            padding-left:10px;
+            height:60px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            z-index: 1000;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        ul li{
+            display:inline-block;
+            list-style-type: none;
+            padding: 10px;
+            margin-right: 20px;
+        }
+        ul li:hover{
+            color:white;
+            background-color:lightpink;
+            border-radius: 4px;
+            padding:10px;
+        }
+        .image{
+            background-image: url(istockphoto-471906412-1024x1024.jpg);
+            background-size:cover;
+            background-repeat: no-repeat;
+            height:850px;
+            background-position:center;
+            width: 100%;
+        }
+        .el2{
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            justify-items: center;
+            padding: 20px;
+            margin-bottom:-250px;
+        }
+        @media(min-width: 768px) {
+            .el2 {
+                grid-template-columns: 1fr 3fr;
+            }
+        }
+        .para{
+            color: #b4a6b3;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding:20px;
+        }
+        .heading{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #b4a6b3;
+            text-align: center;
+            padding:20px;
+            font-size: 40px;
+        }
+        .video{
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+            font-weight: bolder;
+            font-size: 3rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: lightpink;
+            margin-top: 20px;
+        }
+        .aboutimage{
+            background-image: url(_Laurel_\ Event\ Planner;\ Event\ Logo.jpeg);
+            height: 300px;
+            max-width: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom:20px;
+        }
+        .el3-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin: 0 40px;
+        }
+        .el3-item {
+            background-color:rgb(255, 255, 255); 
+            color:lightpink; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .el3-item h2 {
+            color: #ff007f;
+            margin-bottom: 10px;
+        }
+        .el3-item p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .el3-item img{
+            margin:0px;
+            height:50px;
+            width:50px;
+            object-fit: contain;
+        }
+        .el3-item:hover{
+            background-color: lightpink;
+            color:rgb(239, 74, 98);
+        }
+        .el4-grid{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap:20px;
+            padding:10px;
+            margin: 0 30px;
+        }
+        .el4-item{
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .el4-item img{
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .el4-item h3{
+            color:#ce3582;
+        }
+        .el5-flex{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            flex-flow: row;
+        }
+        .el5-item{
+            flex: 1 1 20%; 
+            margin: 20px;
+            box-sizing: border-box;
+        }
+        .el5-item h3{
+            color:#ce3582;
+        }
+        @media(min-width: 768px) {
+           .el5{
+            display:flex;
+            flex-flow: column;
+           }
+        }
+        .el6-container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap:20px;
+            margin: 20px 40px;
+        }
+        .el6-item img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .el6-item p{
+            color: gray;
+            text-align: center;
+            padding:15px;
+            line-height: 1.6;
+            font-size: 20px;
+        }
+        .review-section {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        @media(min-width: 768px) {
+            .review-section {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1200px;
+                margin: 20px auto;
+            }
+        }
+        .review-text {
+            max-width: 100%;
+            text-align: center;
+        }
+        @media(min-width: 768px) {
+            .review-text {
+                max-width: 40%;
+                text-align: left;
+            }
+        }
+        .review-text h2 {
+            color: #e91e63;
+            font-size: 24px;
+        }
+        .review-text p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .review-text button {
+            background-color: #e91e63;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .review-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 100%;
+        }
+        @media(min-width: 768px) {
+            .review-cards {
+                max-width: 50%;
+            }
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .card p {
+            font-style: italic;
+            color: #e91e63;
+            margin-bottom: 10px;
+        }
+        .card h5{
+            text-align: right;
+            font-weight: bold;
+            color: #333;
+        }
+        .card:hover{
+            background-color: lightpink;
+            color:rgb(239, 74, 98);
+        }
+        .book{
+            padding:10px;
+            text-align: center;
+            width: 100%;
+            margin-top: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .book form input{
+            padding:20px;
+            border-radius: 10px;
+            text-align: center;
+            align-items: center;
+            width: 80%;
+            max-width: 600px;
+            margin:15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .book form button{
+            background-color: lightpink;
+            color:rgb(239, 74, 98);
+            padding:10px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border:none;
+        }
+        .contact{
+            background-color: lightpink;
+            height: 400px;
+            width:100%;
+            color: white;
+        }
+            .contact i{
+                height:50px;
+                width:50px;
+            }
+        @media(min-width: 768px) {
+            .contact {
+                text-wrap: wrap;
+            }
+            .contact iframe{
+                text-wrap: wrap;
+            }
+        }
+        .para p{
+            color: #b4a6b3;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            text-wrap: wrap;
+            line-height: 30px;
+        }
+        .aboutus{
+            display: grid;
+          grid-template-columns: 1fr 3fr;
+          align-items: center;
+          justify-items: center;
+          padding: 20px;
+          color:#b4a6b3;
+          line-height: 25px;
+        }
+        .aboutus img{
+            width: 150px;           
+          height: auto; 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="el1">
+        <img src="_Laurel_ Event Planner; Event Logo.jpeg">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#aboutus">ABOUT US</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#ourwork">OUR WORK</a></li>
+            <li><a href="#reviews">REVIEWS</a></li>
+            <li><a href="#bookus">BOOK US</a></li>
+            <li><a href="#contactus">CONTACT US</a></li>
+        </ul>
+    </div>
+    <section id="home">
+        <div class="image">
+        </div>
+    </section>
+
+
+
+
+   
+    
+    <div class="para">
+        <p>An event managemenLaruel events is behind the scenes, working tirelessly to make sure that there’s no hitch on the show. It’s our job to see that things run smoothly.
+            t website helps in planning and managing various types of events.</p>
+            <p>A wedding is, more than anything, a shining memory. It’s a production, with the bride and groom playing the main characters, while everyone else plays a supporting role.</p>
+            <p></p>
+        </div>
+        
+        
+        <h2 class="heading">ABOUT US</h2>
+
+    <section id="aboutus">
+
+    <div class="aboutus">
+      <img src="_Laurel_ Event Planner; Event Logo.jpeg">
+      <p>Our company was started by Ms. Lakshmi Menon in the year 2015 since then we have provided many servies Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quas quae, magni laborum non provident sunt eligendi nobis aliquid hic. In repudiandae vitae facilis accusantium distinctio ducimus molestias, iure repellendus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti est corrupti, assumenda natus similique magnam ab odio voluptatem quidem illo, quas dicta! Minus tempore quisquam, itaque deserunt eligendi asperiores qui. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </p>
+    </div>
+</section>
+
+
+
+
+
+    <section id="services">
+        <h2 class="heading">OUR SERVICES</h2>
+        <div class="el3-grid">
+            <div class="el3-item">
+                <img src="https://png.pngtree.com/png-clipart/20201208/original/pngtree-location-pin-icon-with-gradient-pink-color-png-image_5521192.jpg" height="50px" width="50px">
+                <h2>Destination & Venues</h2>
+                <p>We create beautiful, memorable weddings that reflect your personal style.</p>
+            </div>
+            <div class="el3-item">
+                <img src="https://st2.depositphotos.com/5266903/8135/v/450/depositphotos_81353600-stock-illustration-payment-flat-icon.jpg" height="50px" width="50px">
+                <h2>Budget Management</h2>
+                <p>Professional planning for corporate meetings, conferences, and events.</p>
+            </div>
+            <div class="el3-item">
+                <img src="https://static.vecteezy.com/system/resources/previews/024/324/461/original/document-management-icon-in-pink-and-purple-color-vector.jpg" height="50px", width="50px">
+                <h2>Vendor Management</h2>
+                <p>Exclusive party planning for birthdays, anniversaries, and celebrations.</p>
+            </div>
+            <div class="el3-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzg8FpRLL2HCrNKuKSgmJdriI3HPFe4PiDdg&s" height="50px", width="50px">
+                <h2>Hospitality & Guest management</h2>
+                <p>Customized décor and theme planning to match your event vision.</p>
+            </div>
+            <div class="el3-item">
+                <img src="https://cdn-icons-png.freepik.com/512/7661/7661620.png" height="50px", width="50px">
+            <h2>Food & Beverages</h2>
+            <p>Customized décor and theme planning to match your event vision.</p>
+        </div>
+        <div class="el3-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAWGFMwO-CgRJA3wVljqr9QU8YxU1VLadBAf_Wwvnpy5G2B83nUtQnQ0EbLOO8RkbWe_o&usqp=CAU" height="50px", width="50px">
+            <h2></h2>
+            <p>Customized décor and theme planning to match your event vision.</p>
+        </div>
+        <div class="el3-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/3700/3700044.png" height="50px", width="50px">
+            <h2>Logistics</h2>
+            <p>Customized décor and theme planning to match your event vision.</p>
+        </div>
+        <div class="el3-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/3990/3990969.png" height="50px", width="50px">
+            <h2>Entertainment</h2>
+            <p>Customized décor and theme planning to match your event vision.</p>
+        </div>
+        <div class="el3-item">
+            <img src="https://cdn1.vectorstock.com/i/1000x1000/45/35/decoration-love-icon-solid-pink-white-style-vector-48414535.jpg" height="50px", width="50px">
+            <h2>Invitation & Gifting</h2>
+            <p>Customized décor and theme planning to match your event vision.</p>
+        </div>
+        <div class="el3-item">
+            <img src="https://static.vecteezy.com/system/resources/previews/004/180/857/non_2x/masquerade-mask-pink-flat-design-long-shadow-glyph-icon-traditional-headwear-with-plant-leaves-ethnic-festival-national-holiday-parade-silhouette-rgb-color-illustration-vector.jpg" height="50px", width="50px">
+            <h2>Decor and Themes</h2>
+            <p>Customized décor and theme planning to match your event vision.</p>
+        </div>
+    </div>
+</section>
+    
+
+
+
+
+    <h2 class="heading">OUR WORK</h2>
+    <section id="ourwork">
+
+        <div class="el4-grid">
+            <div class="el4-item">
+                <img src="https://shaadisquad.com/wp-content/gallery/anushka-virat/cache/5.jpg-nggid011-ngg0dyn-480x320x100-00f0w010c011r110f110r010t010.jpg">
+                <h3>Virat-Anushka</h3>
+                <p>Itlay</p>
+            </div>
+            <div class="el4-item">
+                <img src="https://shaadisquad.com/wp-content/gallery/katrina-vicky/cache/Cover-photo.jpg-nggid0218-ngg0dyn-480x320x100-00f0w010c011r110f110r010t010.jpg">
+                <h3>Vicky-Katrina</h3>
+                <p>Ranthambore, India</p>
+            </div>
+            <div class="el4-item">
+                <img src="https://shaadisquad.com/wp-content/gallery/priyanka-nick/cache/4.jpg-nggid0223-ngg0dyn-480x320x100-00f0w010c011r110f110r010t010.jpg">
+                <h3>Nick-Priyanka</h3>
+                <p>Mumbai, India</p>
+            </div>
+            <div class="el4-item">
+                <img src="https://shaadisquad.com/wp-content/gallery/aksha-hemant/cache/13.png-nggid0241-ngg0dyn-480x320x100-00f0w010c011r110f110r010t010.png">
+                <h3>Aksha-Hemanth</h3>
+                <p>Goa,India</p>
+            </div>
+            <div class="el4-item">
+                <img src="https://shaadisquad.com/wp-content/gallery/archana-prithwish/cache/7.png-nggid0266-ngg0dyn-480x320x100-00f0w010c011r110f110r010t010.png">
+                <h3>Archana-Divesh</h3>
+                <p>Kerala,India</p>
+            </div>
+          <div class="el4-item">
+            <img src="https://shaadisquad.com/wp-content/gallery/athiya-kl-rahul/cache/Cover-photo.jpg-nggid03260-ngg0dyn-480x320x100-00f0w010c011r110f110r010t010.jpg">
+            <h3>Rahul-Athiya</h3>
+            <p>Jhodpur,India</p>
+        </div>
+        <div class="el4-item">
+            <img src="https://shaadisquad.com/wp-content/gallery/anushka-john/cache/7.png-nggid0251-ngg0dyn-480x320x100-00f0w010c011r110f110r010t010.png">
+            <h3>Anushka-Jhon</h3>
+            <p>India</p>
+        </div>
+        <div class="el4-item">
+            <img src="https://shaadisquad.com/wp-content/gallery/nayanthara-vignesh/cache/3.png-nggid03289-ngg0dyn-480x320x100-00f0w010c011r110f110r010t010.png">
+            <h3>Nayanthara-vignesh</h3>
+            <p>India</p>
+        </div>
+        <div class="el4-item">
+            <img src="https://shaadisquad.com/wp-content/gallery/hanna-saif/cache/5.png-nggid03116-ngg0dyn-480x320x100-00f0w010c011r110f110r010t010.png">
+            <h3>Hanna-Saif</h3>
+            <p>India</p>
+        </div>
+    </div>
+    <a href="viewmore.html">view more</a>
+</section>
+    
+   
+
+   
+    <h2 class="heading">FOUNDER</h2>
+    <div class="el5-flex">
+        <div class="el5-item">
+          <img src="https://img.freepik.com/premium-photo/modern-rich-indian-woman-his-30s-looks-into-distance_943281-37329.jpg">
+           <h3>Sukesh</h3>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt veritatis illum atque.</p>
+        </div>
+        <div class="el5-item">
+          <img src="https://img.freepik.com/premium-photo/modern-rich-indian-woman-his-30s-looks-into-distance_943281-37265.jpg">
+           <h3>Sukesh</h3>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt veritatis illum atque.</p>
+        </div>
+      </div>
+    
+
+
+    <section id="reviews">
+
+        
+        <h2 class="heading">REVIEWS</h2>
+        <div class="review-section">
+            <div class="review-text">
+                <h2>Client Testimonials</h2>
+                <p>Hear from our clients who have experienced exceptional event planning and execution.</p>
+                <button>Read More</button>
+            </div>
+            <div class="review-cards">
+                <div class="card">
+                    <p>"Laurel's Events made our wedding day magical! Their attention to detail was amazing."</p>
+                    <h5>- Jane Doe</h5>
+                </div>
+                <div class="card">
+                    <p>"Our corporate event was a huge success, thanks to their professional planning."</p>
+                    <h5>- John Smith</h5>
+                </div>
+            <div class="card">
+                <p>"Our corporate event was a huge success, thanks to their professional planning."</p>
+                <h5>- John Smith</h5>
+            </div>
+            <div class="card">
+                <p>"Our corporate event was a huge success, thanks to their professional planning."</p>
+                <h5>- John Smith</h5>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+
+    <h2 class="heading">ACHIVEMENTS</h2>
+    <p style="margin: 40px; line-height: 25px; color:gray; font-size:20px; font-family: Georgia, 'Times New Roman', Times, serif; align-items: center; padding:15px;">It took a lot of hardwork and dedication for us to reach these milestones .we promise that this will be continued Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita repellat asperiores rem et praesentium, facilis debitis temporibus molestiae aliquid! In exercitationem illo rem doloribus obcaecati laudantium, quaerat odit vitae eos. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, dolor fugit voluptates aliquam reiciendis sint tenetur repellendus itaque similique fuga accusamus ducimus quam labore cupiditate obcaecati illo deleniti vel harum?</p>
+    <div class="el6-container">
+      <div class="el6-item">
+        <img src="https://www.kundanrefinery.com/pub/media/wysiwyg/Events/iigc-goa-event-awards-image-2.jpg">
+        <p>Award for being the India's No.1</p>
+      </div>
+      <div class="el6-item">
+        <img src="https://kraftstarmanagement.com/wp-content/uploads/2019/11/WhatsApp-Image-2019-01-12-at-5.21.07-PM-1-1024x768.jpeg">
+        <p>Award for havung good leadership</p>
+      </div>
+      <div class="el6-item">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/9/340034484/QL/LX/WE/9136637/award-show.jpg">
+        <p>Award for being a greatest support for the brides</p>
+      </div>
+      <div class="el6-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS402GUU48AzYiXYH6aax2QuMU0gKFbxJZUVw&s">
+        <p>Award for the best teenagers management</p>
+      </div>
+    </div>
+
+
+
+
+
+  <h2 class="heading">BOOK WITH US</h2>
+<section id="bookus">
+
+    <div class="book">
+        
+        <form action="https://formsubmit.co/sindhu1606reddy@gmail.com" method="POST">
+            <h3>name</h3>
+                <input type="text" placeholder="name">
+                <h3>Email</h3>
+                <input type="mail" placeholder="email">
+                <h3>Phone number</h3>
+                <input type="tel" placeholder="phone number">
+                <h3>Type of the event</h3>
+                <input type="text" placeholder="event type">
+                <h3>Address</h3>
+                <input type="text" placeholder="address">
+                <h3>Start date of the event</h3>
+                <input type="date" placeholder="event start date">
+                <h3>End date of the event</h3>
+                <input type="date" placeholder="event end date">
+                <h3>Place of the event</h3>
+                <input type="text" placeholder="event place">
+                <h3>Budget</h3>
+                <input type="number" placeholder="budget"><br>
+                <button>Submit</button>
+            </form>     
+        </div>
+        
+    </section>
+
+
+   <section id="contactus">
+       <div class="contact">
+           <a href="mailto:laurelevents@gmail.com"><i class="fa-regular fa-envelope"></i>:laurelevents@gmail.com</a>
+           <a href="tel:900001000"><i class="fa-solid fa-phone"></i>:Call us</a>
+           <a href="SMS:900001000"><i class="fa-regular fa-message"></i>:Message us</a>
+           <a href="https://maps.app.goo.gl/PgGMHRy5ZjPYKCPKA"><i class="fa-solid fa-location-dot"></i>:Location</a>
+           <a href="#"><i class="fa-brands fa-instagram"></i>:Instagram</a>
+        </div>
+    </section>
+</body>
+</html>

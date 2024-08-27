@@ -13,9 +13,90 @@
            margin:0px;
            padding:0;
         }
-        a{
-          background-color: lightpink;
-          color: white;
+        .el1 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(206, 126, 126);
+    padding-left: 10px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    position: fixed;
+    z-index: 1000;
+}
+
+ul {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+ul li:hover {
+    color: white;
+    background-color: lightpink;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.lines {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close-nav {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links li {
+        display: block;
+        text-align: right;
+        margin: 0;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .lines {
+        display: block;
+    }
+
+    #nav:target {
+        display: flex;
+    }
+
+    .close-nav {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+        color: white;
+        text-decoration: none;
+    }
+}
+a{
+          color: lightpink;
           padding:15px;
           border-radius: 4px;
           width: fit-content;
@@ -28,35 +109,7 @@
           background-color: lightpink;
           color:rgb(239, 74, 98);
         }
-        .el1{
-            background-color:rgb(255, 255, 255);
-            color:rgb(206, 126, 126);
-            padding-left:10px;
-            height:60px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            position: fixed;
-            z-index: 1000;
-        }
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-        }
-        ul li{
-            display:inline-block;
-            list-style-type: none;
-            padding: 10px;
-            margin-right: 20px;
-        }
-        ul li:hover{
-            color:white;
-            background-color:lightpink;
-            border-radius: 4px;
-            padding:10px;
-        }
+
         .image{
             background-image: url(istockphoto-471906412-1024x1024.jpg);
             background-size:cover;
@@ -106,7 +159,7 @@
             margin-top: 20px;
         }
         .aboutimage{
-            background-image: url(https://i.pinimg.com/originals/c4/8f/62/c48f62c8f6f0e333d74db3cdcaa5be4e.jpg);
+            background-image: url(_Laurel_\ Event\ Planner;\ Event\ Logo.jpeg);
             height: 300px;
             max-width: 100%;
             background-size: contain;
@@ -167,20 +220,41 @@
         .el4-item h3{
             color:#ce3582;
         }
-        .el5-flex{
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            flex-flow: row;
-        }
-        .el5-item{
-            flex: 1 1 20%; 
-            margin: 20px;
-            box-sizing: border-box;
-        }
-        .el5-item h3{
-            color:#ce3582;
-        }
+        @media only screen and (max-width: 768px) {
+    .el4-grid {
+        grid-template-columns: auto;
+        margin: 0 10px;
+    }
+
+    .el4-item {
+        padding: 8px;
+    }
+
+    .el4-item h3 {
+        font-size: 1.2em;
+    }
+}
+        .el5-flex {
+    display: flex;
+    justify-content: center;   
+    align-items: center;                    
+    flex-flow: row;
+    margin: 0 auto;            
+    width: 100%;              
+    max-width: 1200px;         
+    box-sizing: border-box;
+        }    
+.el5-item {
+    flex: 1 1 20%;             
+    margin: 20px;
+    box-sizing: border-box;    
+    text-align: center;        
+}
+
+.el5-item h3 {
+    color: #ce3582;
+}
+
         @media(min-width: 768px) {
            .el5{
             display:flex;
@@ -205,6 +279,17 @@
             line-height: 1.6;
             font-size: 20px;
         }
+        @media only screen and (max-width: 768px) {
+    .el6-container {
+        grid-template-columns: auto auto;
+        margin: 10px 20px;
+    }
+
+    .el6-item p {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
         .review-section {
             display: flex;
             flex-direction: column;
@@ -310,11 +395,17 @@
         }
         .contact{
             background-color: lightpink;
-            height: 400px;
+            height: 490px;
             width:100%;
             color: white;
         }
-            .contact i{
+        .contact a{
+            color:white;
+        }
+        .contact a:hover{
+            color:#e91e63
+        }
+        .contact i{
                 height:50px;
                 width:50px;
             }
@@ -352,16 +443,18 @@
 <body>
     <div class="el1">
         <img src="_Laurel_ Event Planner; Event Logo.jpeg">
-        <ul>
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#aboutus">ABOUT US</a></li>
-            <li><a href="#services">SERVICES</a></li>
-            <li><a href="#ourwork">OUR WORK</a></li>
-            <li><a href="#reviews">REVIEWS</a></li>
-            <li><a href="#bookus">BOOK US</a></li>
-            <li><a href="#contactus">CONTACT US</a></li>
+        <a href="#nav" class="lines">&#9776;</a>
+        <ul class="nav-links" id="nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutus">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#bookus">Book Us</a></li>
+            <li><a href="#contactus">Contact</a></li>
         </ul>
+        <a href="#" class="close-nav"></a>
     </div>
+    
     <section id="home">
         <div class="image">
         </div>
@@ -382,9 +475,12 @@
         
         <h2 class="heading">ABOUT US</h2>
 
+
+
     <section id="aboutus">
+
     <div class="aboutus">
-      <img src="https://i.pinimg.com/originals/c4/8f/62/c48f62c8f6f0e333d74db3cdcaa5be4e.jpg">
+      <img src="_Laurel_ Event Planner; Event Logo.jpeg">
       <p>Our company was started by Ms. Lakshmi Menon in the year 2015 since then we have provided many servies Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quas quae, magni laborum non provident sunt eligendi nobis aliquid hic. In repudiandae vitae facilis accusantium distinctio ducimus molestias, iure repellendus.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti est corrupti, assumenda natus similique magnam ab odio voluptatem quidem illo, quas dicta! Minus tempore quisquam, itaque deserunt eligendi asperiores qui. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </p>
@@ -518,11 +614,7 @@
            <h3>Sukesh</h3>
            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt veritatis illum atque.</p>
         </div>
-        <div class="el5-item">
-          <img src="https://img.freepik.com/premium-photo/modern-rich-indian-woman-his-30s-looks-into-distance_943281-37265.jpg">
-           <h3>Sukesh</h3>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt veritatis illum atque.</p>
-        </div>
+
       </div>
     
 
@@ -624,6 +716,8 @@
            <a href="SMS:900001000"><i class="fa-regular fa-message"></i>:Message us</a>
            <a href="https://maps.app.goo.gl/PgGMHRy5ZjPYKCPKA"><i class="fa-solid fa-location-dot"></i>:Location</a>
            <a href="#"><i class="fa-brands fa-instagram"></i>:Instagram</a>
+           <a href="#"><i class="fa-brands fa-youtube"></i>:YouTube</a>
+
         </div>
     </section>
 </body>

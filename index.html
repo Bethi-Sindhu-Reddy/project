@@ -23,6 +23,7 @@
     justify-content: space-between;
     align-items: right;
     position: fixed;
+    top:0px;
     z-index: 1000;
 }
 
@@ -168,7 +169,7 @@ a{
         }
         .el3-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns:auto auto;
             gap: 20px;
             padding: 20px;
             margin: 0 40px;
@@ -197,6 +198,7 @@ a{
         .el3-item:hover{
             background-color: lightpink;
             color:rgb(239, 74, 98);
+            width:100%;
         }
         .el4-grid{
             display: grid;
@@ -213,9 +215,12 @@ a{
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
         .el4-item img{
-            width: 100%;
+            width: 95%;
             height: auto;
             border-radius: 8px;
+        }
+        .el4-item img:hover{
+            width:100%;
         }
         .el4-item h3{
             color:#ce3582;
@@ -448,6 +453,14 @@ a{
         margin-bottom: 30px; 
     }
 }
+section{
+    margin-top:50px;
+    margin-bottom: 30px;
+}
+footer{
+    text-align: center;
+    margin-bottom: 20px;
+}
     </style>
 </head>
 <body>
@@ -482,12 +495,12 @@ a{
             <p></p>
         </div>
         
+       
         
+
+
+        <section id="aboutus">
         <h2 class="heading">ABOUT US</h2>
-
-
-
-    <section id="aboutus">
 
     <div class="aboutus">
       <img src="https://i.pinimg.com/564x/2b/94/52/2b9452740811ccab8aecdff663fd668d.jpg">
@@ -561,8 +574,8 @@ a{
 
 
 
+<section id="ourwork">
     <h2 class="heading">OUR WORK</h2>
-    <section id="ourwork">
 
         <div class="el4-grid">
             <div class="el4-item">
@@ -688,8 +701,8 @@ a{
 
 
 
+    <section id="bookus">
   <h2 class="heading">BOOK WITH US</h2>
-<section id="bookus">
 
     <div class="book">
         
@@ -730,5 +743,13 @@ a{
 
         </div>
     </section>
+
+
+
+
+    <footer>
+        <p>&copy; p events. All rights reserved.</p>
+    </footer>
+    
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -200,6 +201,35 @@ a{
             color:rgb(239, 74, 98);
             width:100%;
         }
+        @media only screen and (max-width: 768px) {
+  .el3-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+    margin: 0 30px;
+  }
+  
+  .el3-item {
+    padding: 20px;
+    border-radius: 6px;
+  }
+  
+  .el3-item img {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .el3-item h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .el3-item p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+          }
+
         .el4-grid{
             display: grid;
             grid-template-columns: auto auto auto;
